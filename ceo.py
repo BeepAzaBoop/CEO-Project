@@ -42,7 +42,7 @@ if labels:
 plt.title("Salary Distribution within Dotplot at David's Care")
 plt.xlabel('Salary (in thousands)')
 plt.tight_layout()
-plt.savefig('salary_dotplot.png')
+plt.savefig('plots/salary_dotplot.png')
 plt.close()
 
 
@@ -68,16 +68,16 @@ table.set_fontsize(12)
 table.scale(1, 2)
 
 plt.tight_layout()
-plt.savefig('salary_histogram_with_table.png')
+plt.savefig('plots/salary_histogram_with_table.png')
 plt.close()
-
+    
 # boxplot
 plt.figure(figsize=(7, 5))
 sns.boxplot(x=salaries, color='blue', flierprops=dict(markerfacecolor='red', marker='o')) # flierprops to highlight outliers 
 plt.title("Salary Distribution within Boxplot at David's Care")
 plt.xlabel('Salary (in thousands)')
 plt.tight_layout()
-plt.savefig('salary_boxplot.png')
+plt.savefig('plots/salary_boxplot.png')
 plt.close()
 
 # stemplot
@@ -85,7 +85,7 @@ fig, ax = stem.stem_graphic(salaries, aggregation=False) # markerfmt to change m
 plt.title("Salary Distribution within Stem Plot at David's Care")
 plt.xlabel('Employee Index')
 plt.ylabel('Salary (in thousands)')
-plt.savefig('salary_stemplot.png', bbox_inches='tight') 
+plt.savefig('plots/salary_stemplot.png', bbox_inches='tight') 
 plt.close()
 
 # plt.savefig is to save plot as img
