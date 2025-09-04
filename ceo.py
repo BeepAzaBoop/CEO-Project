@@ -40,7 +40,7 @@ handles, labels = plt.gca().get_legend_handles_labels()
 if labels:
     plt.legend(handles, [l for l in labels if l], title="Employee Title", bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.title("Salary Distribution within Dotplot at David's Care")
-plt.xlabel('Salary (in in thousands)')
+plt.xlabel('Salary (in thousands)')
 plt.tight_layout()
 plt.savefig('salary_dotplot.png')
 plt.close()
