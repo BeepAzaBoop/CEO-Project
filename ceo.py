@@ -52,7 +52,7 @@ relative_frequencies = counts / counts.sum()
 
 # plotting both histogram and frequency table
 fig, (ax_hist, ax_table) = plt.subplots(2, 1, figsize=(7, 8), gridspec_kw={'height_ratios': [3, 1]})
-ax_hist.hist(salaries, bins=8, color='green', edgecolor='black')
+ax_hist.hist(salaries, bins=15, color='green', edgecolor='black')
 ax_hist.set_title("Salary Distribution & Frequency Table at David's Care")
 ax_hist.set_xlabel('Salary (in thousands)')
 ax_hist.set_ylabel('Frequency')
