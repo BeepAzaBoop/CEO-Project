@@ -21,7 +21,13 @@ title_colors = {
     "Assistant": "yellow",
     "Intern": "gray",
 }
-salaries = np.array([150,125,115,90,90,90,90,85,85,80])
+salaries = np.array([150,125,110,95,90,90,90,85,85,80])
+
+Q1 = 85
+Q3 = 110 # i had to manually find the quartiles because numpys percentile func sucks
+IQR = Q3 - Q1
+lower_bound = Q1 - 1.5 * IQR
+upper_bound = Q3 + 1.5 * IQR
 
 
 MeanSalary = np.mean(salaries).round()
@@ -91,3 +97,5 @@ plt.close()
 # plt.savefig is to save plot as img
 print('Plots saved as images')
 print(f"Mean Salary: ${MeanSalary * 1000}, Mode Salary: ${ModeSalary * 1000}, Median Salary: ${MedianSalary * 1000}")
+print(f"Q1: ${Q1}, Q3: ${Q3}, IQR: ${IQR}")
+print(f"Lower Bound for Outliers: ${lower_bound}, Upper Bound for Outliers: ${upper_bound}")
