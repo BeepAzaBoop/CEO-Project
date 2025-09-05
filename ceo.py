@@ -66,7 +66,7 @@ ax_hist.set_ylabel('Frequency')
 table_data = [[str(sal), str(freq), f"{rel:.2%}"] for sal, freq, rel in zip(unique, counts, relative_frequencies)]
 ax_table.axis('off')
 table = ax_table.table(cellText=table_data,
-                      colLabels=["Salary", "Frequency", "Relative Frequency"],
+                      colLabels=["Salary (in thousands)", "Frequency", "Relative Frequency"],
                       cellLoc='center',
                       loc='center')
 table.auto_set_font_size(False)
